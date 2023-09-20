@@ -38,8 +38,8 @@ const displayPhones = phones => {
                   <h2 class="card-title">${phone.phone_name}</h2>
                   <h3 class="card-title">${phone.brand}</h3>
                   <p>${phone.slug}</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
+                  <div class="card-actions justify-center mt-7 ">
+                    <button onclick="handleShowDetail('${phone.slug}')" class="btn btn-primary">Show Details</button>
                   </div>
                 </div>
         `
@@ -50,6 +50,13 @@ const displayPhones = phones => {
     //hide loading spinner
     toggleLoadingSpinner(false);
 }
+
+
+
+const handleShowDetail = (id) =>{
+    console.log(id);
+}
+
 
 
 const handleSearch = () =>{
